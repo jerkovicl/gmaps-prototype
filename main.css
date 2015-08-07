@@ -1,0 +1,25 @@
+/*JSON VISUALIZER*/
+.structure {
+    color: red;
+    display: inline-block;
+}
+.name {
+    color: green;
+    display: inline-block;
+    margin-right: .5em;
+}
+.object-content, .array-content {
+    color: blue;
+    display: inline-block;
+}
+.comma {
+    color: red;
+    display: inline-block;
+}
+#container {
+    font-family: monospace;
+}
+
+.labels {
+    visibility: hidden;
+}

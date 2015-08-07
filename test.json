@@ -1,0 +1,205 @@
+{
+    "objekti" : [
+        {
+            "title": "Aberystwyth University",
+            "url": "www.aber.ac.uk",
+            "phone": "+44 (0)1970 623 111",
+            "lat": 52.415524,
+            "lng": -4.063066,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "white",
+                    "ANGLE1": "28",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "white",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "tooltip": "Obalno svjetlo Rt Velika kapela PS br. 494"
+        },
+        {
+            "title": "Bangor University",
+            "url": "www.bangor.ac.uk",
+            "phone": "+44 (0)1248 351 151",
+            "lat": 53.229520,
+            "lng": -4.129987,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "white",
+                    "ANGLE1": "58",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "yellow",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ]
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 51.482708,
+            "lng": -3.165881,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "white",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 52.482708,
+            "lng": -3.165881,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "white",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "green",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 53.482708,
+            "lng": -3.165881,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "yellow",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 54.482708,
+            "lng": -3.165881,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        }
+    ]
+}

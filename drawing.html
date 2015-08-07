@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Circles</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <!--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      var ButtonFactory = (function() {
+        var width = 25;
+        var height = 25;
+        return new function() {
+
+          var h = 1;
+          var s = 78; // constant saturation
+          var l = 63; // constant luminance
+          var a = 1;
+
+          var getColor = function(val, range) {
+            h = Math.floor((360 / range) * val);
+
+            return "hsla(" + h +"," + s + "%," + l +"%," + a +")";
+          };
+
+          var getColor1 = function() {
+            return "hsla(" + h +"," + s + "%," + (l - 30) +"%," + a +")";
+          };
+
+          // draws a rounded rectangle
+          var drawRect = function(context, x, y, width, height) {
+            var radius = 10
+            context.beginPath();
+            context.moveTo(x + radius, y);
+            context.lineTo(x + width - radius, y);
+            context.quadraticCurveTo(x + width, y, x + width, y + radius);
+            context.lineTo(x + width, y + height - radius);
+            context.quadraticCurveTo(x + width, y + height, x + width -
+            radius, y + height);
+            context.lineTo(x + radius, y + height);
+            context.quadraticCurveTo(x, y + height, x, y + height - radius);
+            context.lineTo(x, y + radius);
+            context.quadraticCurveTo(x, y, x + radius, y);
+            context.closePath();
+          }
+
+          this.createCanvas = function(label, range) {
+            var canvas = document.createElement("canvas");
+            canvas.width = width;
+            canvas.height = height;
+
+            var context = canvas.getContext("2d");
+
+            var val = parseInt(label);
+
+            context.clearRect(0,0,width,height);
+
+            var grad = context.createLinearGradient(0, 0, 0, height);
+
+            var color0 = getColor(val, range);
+
+            grad.addColorStop(0, color0);
+            grad.addColorStop(1, getColor1());
+
+            context.fillStyle = grad;
+            context.strokeStyle = color0;
+
+            drawRect(context, 0, 0, width, height);
+            context.fill();
+            context.stroke();
+
+            context.fillStyle = "white";
+            context.strokeStyle = "black"
+
+            // Render Label
+            context.font = "bold 12pt Arial";
+            context.textBaseline  = "top";
+
+            var textWidth = context.measureText(label);
+
+            // centre the text.
+            context.fillText(label,
+              Math.floor((width / 2) - (textWidth.width / 2)),
+              4
+            );
+
+            return canvas;
+
+          };
+
+          this.create = function(label, range) {
+            var canvas = this.createCanvas(label, range);
+            return canvas.toDataURL();
+          };
+        }
+      })();
+    </script>
+  </head>
+ <!-- <script>
+    for(var i = 1; i<100; i++) {
+    document.body.appendChild(ButtonFactory.createCanvas(i,99));
+    }
+  </script>-->
+  <canvas id="myCanvas" width="578" height="200"></canvas>
+  <script>
+    $.getJSON( "test.json", function( data ) {
+
+         $.each(data.objekti, function (key, data) {
+    //$.each(json1.objekti, function (key, data) {
+
+        var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      context.beginPath();
+      context.lineTo(100, 100);
+      /*
+      context.arc(x,y,r,sAngle,eAngle,counterclockwise)
+      x    The x-coordinate of the center of the circle
+      y    The y-coordinate of the center of the circle
+      r    The radius of the circle
+      sAngle    The starting angle, in radians (0 is at the 3 o'clock position of the arc's circle)
+      eAngle    The ending angle, in radians
+      counterclockwise    Optional. Specifies whether the drawing should be counterclockwise or clockwise. False is default, and indicates clockwise, while true indicates counter-clockwise.
+      moveTo(0,0); moves the path to the specified point in the canvas, without creating a line.
+      lineTo(300,150); method adds a new point and creates a line from that point to the last specified point in the canvas (this method does not draw the line).
+      http://www.html5canvastutorials.com/advanced/html5-canvas-get-image-data-url/
+       */
+      context.arc(288, 75, 70, 0, data.angle, false);
+      //context.arc(288, 75, 70, 4.7, Math.PI*.5, false); turn 90 degrees
+      //context.arc( x, y, radius, Math.PI, Math.PI*2, false); turn 180 degrees
+      context.closePath();
+      context.lineWidth = 5;
+      //context.fillStyle = 'red';
+      //context.fill();
+      //context.strokeStyle=data.objekti[0].color;
+      context.strokeStyle=data.color;
+      //context.strokeStyle = '#550000';
+      context.stroke();
+          });
+
+       });
+  </script>
+
+  <body>
+    <!--<div id="map-canvas"></div>-->
+    <div></div>
+  </body>
+
+</html>
