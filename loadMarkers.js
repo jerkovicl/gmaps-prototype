@@ -146,7 +146,7 @@ function initialize() {
           //bounds.extend(latLng);
           var marker = new MarkerWithLabel({
             position: latLng,
-            map: map,
+            //map: map,
             icon: data.icon,
             draggable: true,
             raiseOnDrag: true,
