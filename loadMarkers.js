@@ -157,7 +157,7 @@ function initialize() {
           // });
 
           var mapLabel = new MapLabel({
-            text: elem,
+            text: elem.src,
             position: latLng,
             map: map,
             fontSize: 35,
