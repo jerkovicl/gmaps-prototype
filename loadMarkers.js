@@ -145,7 +145,7 @@ function initialize() {
           // Marker manager
           //bounds.extend(latLng);
           var marker = new MarkerWithLabel({
-            position: latLng + Math.random(),
+            position: latLng,
             map: map,
             icon: data.icon,
             draggable: true,
