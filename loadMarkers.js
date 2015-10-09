@@ -233,14 +233,18 @@ function initialize() {
       }
 
       //mgr.addMarkers(markers, 0, 3);
-      var markerCluster = new MarkerClusterer(map, markers);
+      var mcOptions = {
+        gridSize: 50,
+        maxZoom: 9
+      };
+      var markerCluster = new MarkerClusterer(map, markers, mcOptions);
     });
 
     //console.log("MARKER COUNT", mgr.getMarkerCount(7));
     //map.fitBounds(bounds);
 
   }
-  mgr.refresh();
+  //  mgr.refresh();
   //updateStatus(mgr.getMarkerCount(map.getZoom()));
 
 }
