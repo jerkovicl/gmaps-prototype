@@ -235,7 +235,7 @@ function initialize() {
       //mgr.addMarkers(markers, 0, 3);
       var mcOptions = {
         gridSize: 50,
-        maxZoom: 9
+        maxZoom: 7
       };
       var markerCluster = new MarkerClusterer(map, markers, mcOptions);
     });
