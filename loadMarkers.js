@@ -209,7 +209,7 @@ function initialize() {
   function getAllMarkers(marker, map) {
     var markers = [];
     //var elem = document.getElementById("kruznica-label");
-    $.getJSON("http://osptest.sistemi.hr/DesktopModules/HotspotsByType/API/HotspotGoogleMaps/GetHotspots/TipObjekta/0", function(data) {
+    $.getJSON("test.json", function(data) {
       for (var i = 0; i < data.objekti.length; i++) {
 
         // var latLng = new google.maps.LatLng(data.objekti[i].lat, data.objekti[i].lng);
