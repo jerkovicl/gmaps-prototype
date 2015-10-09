@@ -4,8 +4,8 @@
             "title": "Aberystwyth University",
             "url": "www.aber.ac.uk",
             "phone": "+44 (0)1970 623 111",
-            "lat": 52.415524,
-            "lng": -4.063066,
+            "lat": 45.5933333333335,
+            "lng": 13.61375,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -37,8 +37,8 @@
             "title": "Bangor University",
             "url": "www.bangor.ac.uk",
             "phone": "+44 (0)1248 351 151",
-            "lat": 53.229520,
-            "lng": -4.129987,
+            "lat": 45.2383333333335,
+            "lng": 13.5419444444445,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -69,8 +69,8 @@
             "title": "Cardiff Metropolitan University",
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
-            "lat": 51.482708,
-            "lng": -3.165881,
+            "lat": 44.87,
+            "lng": 13.74,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -103,8 +103,8 @@
             "title": "Cardiff Metropolitan University",
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
-            "lat": 52.482708,
-            "lng": -3.165881,
+            "lat": 44.8698611111115,
+            "lng": 14.0916666666665,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -137,8 +137,8 @@
             "title": "Cardiff Metropolitan University",
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
-            "lat": 53.482708,
-            "lng": -3.165881,
+            "lat": 45.2133333333335,
+            "lng": 14.468333333333,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -171,8 +171,76 @@
             "title": "Cardiff Metropolitan University",
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
-            "lat": 54.482708,
-            "lng": -3.165881,
+            "lat": 44.87,
+            "lng": 14.4331944444445,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 44.9268055555555,
+            "lng": 14.748472222222,
+            "icon": "images/flag.png",
+            "imgsvj": "images/svj1.jpg",
+            "sectors": [
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "78",
+                    "ANGLE2": "252",
+                    "DELTA": "224"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "red",
+                    "ANGLE1": "252",
+                    "ANGLE2": "258",
+                    "DELTA": "6"
+                },
+                {
+                    "SECTYPE": "Sektor vidljivosti",
+                    "COLOR": "blue",
+                    "ANGLE1": "258",
+                    "ANGLE2": "298",
+                    "DELTA": "40"
+                }
+            ],
+            "color": "yellow",
+            "angle": "180"
+        },
+        {
+            "title": "Cardiff Metropolitan University",
+            "url": "www.cardiffmet.ac.uk",
+            "phone": "+44 (0)2920 416 138",
+            "lat": 44.5534027777775,
+            "lng": 14.3980555555555,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -818,7 +886,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.162281,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -852,7 +920,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.163881,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -886,7 +954,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.125881,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -920,7 +988,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.115881,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -954,7 +1022,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.125881,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -988,7 +1056,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.165681,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -1022,7 +1090,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.165381,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
@@ -1056,109 +1124,7 @@
             "url": "www.cardiffmet.ac.uk",
             "phone": "+44 (0)2920 416 138",
             "lat": 54.482708,
-            "lng": -3.164881,
-            "icon": "images/flag.png",
-            "imgsvj": "images/svj1.jpg",
-            "sectors": [
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "78",
-                    "ANGLE2": "252",
-                    "DELTA": "224"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "red",
-                    "ANGLE1": "252",
-                    "ANGLE2": "258",
-                    "DELTA": "6"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "258",
-                    "ANGLE2": "298",
-                    "DELTA": "40"
-                }
-            ],
-            "color": "yellow",
-            "angle": "180"
-        },
-        {
-            "title": "Cardiff Metropolitan University",
-            "url": "www.cardiffmet.ac.uk",
-            "phone": "+44 (0)2920 416 138",
-            "lat": 54.482708,
-            "lng": -3.167881,
-            "icon": "images/flag.png",
-            "imgsvj": "images/svj1.jpg",
-            "sectors": [
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "78",
-                    "ANGLE2": "252",
-                    "DELTA": "224"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "red",
-                    "ANGLE1": "252",
-                    "ANGLE2": "258",
-                    "DELTA": "6"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "258",
-                    "ANGLE2": "298",
-                    "DELTA": "40"
-                }
-            ],
-            "color": "yellow",
-            "angle": "180"
-        },
-        {
-            "title": "Cardiff Metropolitan University",
-            "url": "www.cardiffmet.ac.uk",
-            "phone": "+44 (0)2920 416 138",
-            "lat": 54.482708,
-            "lng": -3.165781,
-            "icon": "images/flag.png",
-            "imgsvj": "images/svj1.jpg",
-            "sectors": [
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "78",
-                    "ANGLE2": "252",
-                    "DELTA": "224"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "red",
-                    "ANGLE1": "252",
-                    "ANGLE2": "258",
-                    "DELTA": "6"
-                },
-                {
-                    "SECTYPE": "Sektor vidljivosti",
-                    "COLOR": "blue",
-                    "ANGLE1": "258",
-                    "ANGLE2": "298",
-                    "DELTA": "40"
-                }
-            ],
-            "color": "yellow",
-            "angle": "180"
-        },
-        {
-            "title": "Cardiff Metropolitan University",
-            "url": "www.cardiffmet.ac.uk",
-            "phone": "+44 (0)2920 416 138",
-            "lat": 54.482708,
-            "lng": -3.165871,
+            "lng": -3.165881,
             "icon": "images/flag.png",
             "imgsvj": "images/svj1.jpg",
             "sectors": [
