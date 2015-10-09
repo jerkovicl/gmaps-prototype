@@ -145,7 +145,7 @@ function initialize() {
           // Marker manager
           //bounds.extend(latLng);
           var marker = new MarkerWithLabel({
-            position: latLng,
+            position: latLng + Math.random(),
             map: map,
             icon: data.icon,
             draggable: true,
@@ -235,7 +235,7 @@ function initialize() {
       //mgr.addMarkers(markers, 0, 3);
       var mcOptions = {
         gridSize: 50,
-        maxZoom: 7
+        maxZoom: 15
       };
       var markerCluster = new MarkerClusterer(map, markers, mcOptions);
     });
