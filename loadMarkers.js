@@ -144,31 +144,31 @@ function initialize() {
           var latLng = new google.maps.LatLng(data.lat, data.lng);
           // Marker manager
           //bounds.extend(latLng);
-          // var marker = new MarkerWithLabel({
-          //   position: latLng,
-          //   map: map,
-          //   icon: data.icon,
-          //   draggable: true,
-          //   raiseOnDrag: true,
-          //   labelContent: elem,
-          //   labelAnchor: new google.maps.Point(50, 71),
-          //   labelClass: "labels" // the CSS class for the label
-          //
-          // });
-
-          var mapLabel = new MapLabel({
-            text: dataURL,
+          var marker = new MarkerWithLabel({
             position: latLng,
             map: map,
-            fontSize: 35,
-            align: 'right'
-          });
-          mapLabel.set('position', latLng);
+            icon: data.icon,
+            draggable: true,
+            raiseOnDrag: true,
+            labelContent: elem,
+            labelAnchor: new google.maps.Point(50, 71),
+            labelClass: "labels" // the CSS class for the label
 
-          var marker = new google.maps.Marker;
-          marker.bindTo('map', mapLabel);
-          marker.bindTo('position', mapLabel);
-          marker.setDraggable(true);
+          });
+
+          // var mapLabel = new MapLabel({
+          //   text: dataURL,
+          //   position: latLng,
+          //   map: map,
+          //   fontSize: 35,
+          //   align: 'right'
+          // });
+          // mapLabel.set('position', latLng);
+          //
+          // var marker = new google.maps.Marker;
+          // marker.bindTo('map', mapLabel);
+          // marker.bindTo('position', mapLabel);
+          // marker.setDraggable(true);
 
           var details = data.url + ", " + data.phone + "." + "<img src=" + data.imgsvj + "></img>";
           google.maps.event.addListener(marker, "mouseover", function(e) {
@@ -232,7 +232,8 @@ function initialize() {
 
       }
 
-      mgr.addMarkers(markers, 0, 3);
+      //mgr.addMarkers(markers, 0, 3);
+      var markerCluster = new MarkerClusterer(map, markers);
     });
 
     //console.log("MARKER COUNT", mgr.getMarkerCount(7));
