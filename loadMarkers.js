@@ -187,13 +187,14 @@ function initialize() {
           //setupMarkers(marker);
           //console.log("MARKER COUNT", mgr.getMarkerCount(map.getZoom()));
         }
-        google.maps.event.addListener(mgr, 'loaded', function() {
-          getAllMarkers(marker, map);
-          console.info("MGR", "LOADED");
-          google.maps.event.addListener(map, 'zoom_changed', function() {
-            console.info(mgr.getMarkerCount(map.getZoom()));
-          });
-        });
+        // google.maps.event.addListener(mgr, 'loaded', function() {
+        //
+        //   console.info("MGR", "LOADED");
+        //   google.maps.event.addListener(map, 'zoom_changed', function() {
+        //     console.info(mgr.getMarkerCount(map.getZoom()));
+        //   });
+        // });
+        getAllMarkers(marker, map);
       }
     });
 
