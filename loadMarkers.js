@@ -36,7 +36,7 @@ function initialize() {
 
   map = new google.maps.Map(document.getElementById("map"), mapProp);
   // Marker manager
-  mgr = new MarkerManager(map);
+  //mgr = new MarkerManager(map);
 
   //  $.getJSON(json, function(json1) {
   //get JSON from folder / external link
