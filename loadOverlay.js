@@ -16,7 +16,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'HRV_adm1.kml',
+      url: 'http://jerkovicl.github.io/gmaps-prototype/HRV_adm1.kml',
       map: map
     });
     // Define the LatLng coordinates for the polygon's path.
