@@ -12,7 +12,7 @@ $('document').ready(function() {
         lat: 44.217659,
         lng: 15.719840
       },
-      mapTypeId: google.maps.MapTypeId.TERRAIN
+      //mapTypeId: google.maps.MapTypeId.TERRAIN
     });
 
     var ctaLayer = new google.maps.KmlLayer({
