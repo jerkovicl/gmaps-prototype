@@ -16,7 +16,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: './HRV_adm1.kml',
+      url: 'HRV_adm1.kml',
       map: map
     });
     // Define the LatLng coordinates for the polygon's path.
@@ -51,5 +51,4 @@ $('document').ready(function() {
     //   region1Polygon.setMap(map);
   }
   google.maps.event.addDomListener(window, 'load', initMap);
-
 });
