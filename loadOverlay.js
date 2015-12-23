@@ -40,10 +40,10 @@ $('document').ready(function() {
         templateId: 2
       }
     });
+    $(".googft-info-window").click(function() {
+      alert("FK YOU");
+    });
   }
-  $(".googft-info-window").click(function() {
-    alert("FK YOU");
-  });
 
   google.maps.InfoWindow.prototype.isOpen = function() {
     var map = infoWindow.getMap();
