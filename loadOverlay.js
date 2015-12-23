@@ -41,8 +41,7 @@ $('document').ready(function() {
       }
     });
   }
-
-  $(".googft-info-window").addEventListener("click", function() {
+  document.getElementByClassName("googft-info-window").addEventListener("click", function() {
     alert("FK YOU");
   });
 
