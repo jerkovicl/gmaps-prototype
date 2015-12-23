@@ -53,7 +53,7 @@ $('document').ready(function() {
     console.log(e);
   });
 
-  document.querySelector('div.gm-style-iw').addEventListener('click', function(event) {
+  document.querySelector('div#map').addEventListener('click', function(event) {
     if (event.target.tagName.toLowerCase() === 'div') {
       console.log(event.target.id);
     }
