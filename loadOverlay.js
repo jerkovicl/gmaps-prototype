@@ -15,7 +15,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'http://jerkovicl.github.io/gmaps-prototype/regions.kml',
+      url: 'http://jerkovicl.github.io/gmaps-prototype/regionsShortened.kml',
       map: map
     });
   }
