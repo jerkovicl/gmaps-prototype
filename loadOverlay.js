@@ -73,10 +73,10 @@ $('document').ready(function() {
       }
     });
     observer.observe(document, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      characterData: false,
+      childList: false,
+      subtree: false,
+      attributes: false,
+      characterData: true,
     });
 
     // later, you can stop observing
