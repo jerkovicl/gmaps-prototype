@@ -41,7 +41,7 @@ $('document').ready(function() {
       }
     });
     $(".googft-info-window").click(function() {
-      alert("FK YOU");
+      console.log("FK YOU");
     });
   }
 
