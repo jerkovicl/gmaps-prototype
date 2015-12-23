@@ -41,15 +41,17 @@ $('document').ready(function() {
       }
     });
 
+    $('.gm-style-iw').on('change', function(e) {
+      console.log(e);
+    });
+
   }
 
   $('.googft-info-window').on('click', function() {
     console.log("FK YOU");
   });
 
-  $(document).on('change', '.gm-style-iw', function(e) {
-    console.log(e);
-  });
+
 
   // google.maps.InfoWindow.prototype.isOpen = function() {
   //   var map = infoWindow.getMap();
