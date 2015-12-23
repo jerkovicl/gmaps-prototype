@@ -14,10 +14,10 @@ $('document').ready(function() {
       }
     });
 
-    var ctaLayer = new google.maps.KmlLayer({
-      url: 'http://jerkovicl.github.io/gmaps-prototype/kml/regionsShortened.kml',
-      map: map
-    });
+    // var ctaLayer = new google.maps.KmlLayer({
+    //   url: 'http://jerkovicl.github.io/gmaps-prototype/kml/regionsShortened.kml',
+    //   map: map
+    // });
     // var layer = new google.maps.FusionTablesLayer({
     //   query: {
     //     select: 'col2',
@@ -25,6 +25,21 @@ $('document').ready(function() {
     //   }
     // });
     // layer.setMap(map);
+    layer = new google.maps.FusionTablesLayer({
+      map: map,
+      heatmap: {
+        enabled: false
+      },
+      query: {
+        select: "col2",
+        from: "12r8gKqTrEd-X6hHILbtTVstsILjAKN9u3WbPdzgt",
+        where: ""
+      },
+      options: {
+        styleId: 2,
+        templateId: 2
+      }
+    });
   }
 
   google.maps.event.addDomListener(window, 'load', initMap);
