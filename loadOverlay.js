@@ -48,12 +48,16 @@ $('document').ready(function() {
     console.log("FK YOU");
   });
 
+  // $('.gm-style-iw').on('change', function(e) {
+  //   console.log(e);
+  //   var infoText = $("div.googft-info-window").text();
+  //   console.log(infoText);
+  // });
 
-  $('.gm-style-iw').on('change', function(e) {
-    console.log(e);
+  if ($('.googft-info-window') !== null) {
     var infoText = $("div.googft-info-window").text();
     console.log(infoText);
-  });
+  }
   // if ($('.googft-info-window') !== null) {
   //   document.querySelector('div#map').addEventListener('click', function(event) {
   //     //  if (event.target.tagName.toLowerCase() === 'div') {
