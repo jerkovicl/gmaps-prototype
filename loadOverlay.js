@@ -69,21 +69,17 @@ $('document').ready(function() {
     var target = document.querySelector('div.googft-info-window');
 
     // create an observer instance
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        console.log(mutation.type);
-      });
+    var observer = new MutationObserver(function() {
+      if (document.querySelector('div.googft-info-window')) {
+        console.log('table has appeared.');
+      }
     });
-
-    // configuration of the observer:
-    var config = {
-      attributes: true,
+    observer.observe(document, {
       childList: true,
-      characterData: true
-    };
-
-    // pass in the target node, as well as the observer options
-    observer.observe(target, config);
+      subtree: true,
+      attributes: false,
+      characterData: false,
+    });
 
     // later, you can stop observing
     //observer.disconnect();
