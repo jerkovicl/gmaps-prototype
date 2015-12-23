@@ -25,7 +25,7 @@ $('document').ready(function() {
     //   }
     // });
     // layer.setMap(map);
-    layer = new google.maps.FusionTablesLayer({
+    var layer = new google.maps.FusionTablesLayer({
       map: map,
       heatmap: {
         enabled: false
