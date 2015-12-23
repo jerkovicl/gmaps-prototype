@@ -47,7 +47,7 @@ $('document').ready(function() {
     console.log("FK YOU");
   });
 
-  $('.gm-style-iw').on('change', function(e) {
+  $(document).on('change', '.gm-style-iw', function(e) {
     console.log(e);
   });
 
