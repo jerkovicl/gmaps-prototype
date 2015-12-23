@@ -42,5 +42,14 @@ $('document').ready(function() {
     });
   }
 
+  $("..googft-info-window").addEventListener("click", function() {
+    alert("FK YOU");
+  });
+
+  google.maps.InfoWindow.prototype.isOpen = function() {
+    var map = infoWindow.getMap();
+    return (map !== null && typeof map !== 'undefined');
+  };
+
   google.maps.event.addDomListener(window, 'load', initMap);
 });
