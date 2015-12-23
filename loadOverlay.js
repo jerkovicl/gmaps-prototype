@@ -41,9 +41,6 @@ $('document').ready(function() {
       }
     });
 
-    $('.gm-style-iw').on('change', function(e) {
-      console.log(e);
-    });
 
   }
 
@@ -52,6 +49,9 @@ $('document').ready(function() {
   });
 
 
+  $('.gm-style-iw').on('change', function(e) {
+    console.log(e);
+  });
 
   // google.maps.InfoWindow.prototype.isOpen = function() {
   //   var map = infoWindow.getMap();
