@@ -70,6 +70,7 @@ $('document').ready(function() {
       var target = $("div.googft-info-window");
       if (target) {
         console.log(target.text());
+        localStorage.setItem("infoValue", infoValue);
       }
     });
     observer.observe(document, {
