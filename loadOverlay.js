@@ -61,6 +61,10 @@ $('document').ready(function() {
 
     /* MUTATION OBSERVER */
 
+    // check if supported
+
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
     // select the target node
     var target = document.querySelector('div.googft-info-window');
 
