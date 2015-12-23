@@ -71,13 +71,13 @@ $('document').ready(function() {
     // create an observer instance
     var observer = new MutationObserver(function() {
       if (target) {
-        console.log(target);
+        console.log(target.text());
       }
     });
     observer.observe(document, {
       childList: true,
       subtree: true,
-      attributes: false,
+      attributes: true,
       characterData: true,
     });
 
