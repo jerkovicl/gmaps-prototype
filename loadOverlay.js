@@ -42,7 +42,7 @@ $('document').ready(function() {
     });
   }
 
-  $("..googft-info-window").addEventListener("click", function() {
+  $(".googft-info-window").addEventListener("click", function() {
     alert("FK YOU");
   });
 
