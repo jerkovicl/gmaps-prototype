@@ -72,7 +72,7 @@ $('document').ready(function() {
         console.log(target.text());
       }
     });
-    observer.observe(target, {
+    observer.observe($("div.googft-info-window"), {
       childList: true,
       subtree: true,
       attributes: false,
