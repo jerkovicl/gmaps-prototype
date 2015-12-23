@@ -40,9 +40,20 @@ $('document').ready(function() {
         templateId: 2
       }
     });
-    $(".googft-info-window").click(function() {
-      console.log("FK YOU");
-    });
+    // $(".googft-info-window").click(function() {
+    //   console.log("FK YOU");
+    // });
+    google.maps.InfoWindow.prototype.opened = false;
+    infoWindow = new google.maps.InfoWindow();
+
+    if (infoWindow.opened) {
+      // do something
+      infoWindow.opened = false;
+      console.log("CLOSED");
+    } else {
+      // do something else
+      infoWindow.opened = true;
+    }
   }
 
   google.maps.InfoWindow.prototype.isOpen = function() {
