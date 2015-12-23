@@ -43,7 +43,6 @@ $('document').ready(function() {
     // $(".googft-info-window").click(function() {
     //   console.log("FK YOU");
     // });
-    infoWindow = new google.maps.InfoWindow();
 
     if (infoWindow.isOpen) {
       // do something
