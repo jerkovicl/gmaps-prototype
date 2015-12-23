@@ -43,16 +43,15 @@ $('document').ready(function() {
     // $(".googft-info-window").click(function() {
     //   console.log("FK YOU");
     // });
-    google.maps.InfoWindow.prototype.opened = false;
     infoWindow = new google.maps.InfoWindow();
 
-    if (infoWindow.opened) {
+    if (infoWindow.isOpen) {
       // do something
-      infoWindow.opened = false;
+      //infoWindow.opened = false;
       console.log("CLOSED");
     } else {
       // do something else
-      infoWindow.opened = true;
+      //  infoWindow.opened = true;
     }
   }
 
