@@ -57,33 +57,33 @@ $('document').ready(function() {
   if ($('.googft-info-window') != null) {
     var infoText = $("div.googft-info-window").text();
     console.log(infoText);
-  }
 
-  /* MUTATION OBSERVER */
 
-  // select the target node
-  var target = document.querySelector('div.googft-info-window');
+    /* MUTATION OBSERVER */
 
-  // create an observer instance
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      console.log(mutation.type);
+    // select the target node
+    var target = document.querySelector('div.googft-info-window');
+
+    // create an observer instance
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        console.log(mutation.type);
+      });
     });
-  });
 
-  // configuration of the observer:
-  var config = {
-    attributes: true,
-    childList: true,
-    characterData: true
-  };
+    // configuration of the observer:
+    var config = {
+      attributes: true,
+      childList: true,
+      characterData: true
+    };
 
-  // pass in the target node, as well as the observer options
-  observer.observe(target, config);
+    // pass in the target node, as well as the observer options
+    observer.observe(target, config);
 
-  // later, you can stop observing
-  //observer.disconnect();
-
+    // later, you can stop observing
+    //observer.disconnect();
+  }
   // if ($('.googft-info-window') !== null) {
   //   document.querySelector('div#map').addEventListener('click', function(event) {
   //     //  if (event.target.tagName.toLowerCase() === 'div') {
