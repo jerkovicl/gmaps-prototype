@@ -57,7 +57,7 @@ $('document').ready(function() {
   if ($('.googft-info-window') != null) {
     var infoText = $("div.googft-info-window").text();
     console.log(infoText);
-    var infoValue;
+    var infoValue = "";
 
     /* MUTATION OBSERVER */
 
