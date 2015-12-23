@@ -65,11 +65,9 @@ $('document').ready(function() {
 
     var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
 
-    // select the target node
-    var target = document.querySelector('div.googft-info-window');
-
     // create an observer instance
     var observer = new MutationObserver(function() {
+      var target = document.querySelector('div.googft-info-window');
       if (target) {
         console.log(target.text());
       }
@@ -78,7 +76,7 @@ $('document').ready(function() {
       childList: true,
       subtree: true,
       attributes: true,
-      characterData: true,
+      characterData: false,
     });
 
     // later, you can stop observing
