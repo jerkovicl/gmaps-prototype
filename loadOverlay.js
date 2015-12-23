@@ -75,8 +75,8 @@ $('document').ready(function() {
     observer.observe(document, {
       childList: false,
       subtree: false,
-      attributes: false,
-      characterData: true,
+      attributes: true,
+      characterData: false,
     });
 
     // later, you can stop observing
