@@ -72,7 +72,7 @@ $('document').ready(function() {
         console.log(target.text());
       }
     });
-    observer.observe(document, {
+    observer.observe(target, {
       childList: true,
       subtree: true,
       attributes: false,
