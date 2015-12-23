@@ -73,8 +73,8 @@ $('document').ready(function() {
       }
     });
     observer.observe(document, {
-      childList: false,
-      subtree: true,
+      childList: true,
+      subtree: false,
       attributes: false,
       characterData: false,
     });
