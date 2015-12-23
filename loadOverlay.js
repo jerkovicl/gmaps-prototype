@@ -15,7 +15,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'HRV_adm1.kml',
+      url: 'regions',
       map: map
     });
   }
