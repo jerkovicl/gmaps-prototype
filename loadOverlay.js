@@ -67,7 +67,7 @@ $('document').ready(function() {
 
     // create an observer instance
     var observer = new MutationObserver(function() {
-      var target = document.querySelector('div.googft-info-window');
+      var target = $("div.googft-info-window");
       if (target) {
         console.log(target.text());
       }
