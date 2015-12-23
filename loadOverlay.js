@@ -14,17 +14,17 @@ $('document').ready(function() {
       }
     });
 
-    // var ctaLayer = new google.maps.KmlLayer({
-    //   url: 'http://jerkovicl.github.io/gmaps-prototype/regionsShortened.kml',
-    //   map: map
-    // });
-    var layer = new google.maps.FusionTablesLayer({
-      query: {
-        select: 'col2',
-        from: '12r8gKqTrEd-X6hHILbtTVstsILjAKN9u3WbPdzgt'
-      }
+    var ctaLayer = new google.maps.KmlLayer({
+      url: 'kml/regionsShortened.kml',
+      map: map
     });
-    layer.setMap(map);
+    // var layer = new google.maps.FusionTablesLayer({
+    //   query: {
+    //     select: 'col2',
+    //     from: '12r8gKqTrEd-X6hHILbtTVstsILjAKN9u3WbPdzgt'
+    //   }
+    // });
+    // layer.setMap(map);
   }
 
   google.maps.event.addDomListener(window, 'load', initMap);
