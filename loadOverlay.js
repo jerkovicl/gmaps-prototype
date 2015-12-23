@@ -47,14 +47,14 @@ $('document').ready(function() {
     console.log("FK YOU");
   });
 
-  $('gm-style-iw').on('change', 'googft-info-window', function(e) {
+  $('gm-style-iw').on('change', function(e) {
     console.log(e);
   });
 
-  google.maps.InfoWindow.prototype.isOpen = function() {
-    var map = infoWindow.getMap();
-    return (map !== null && typeof map !== 'undefined');
-  };
+  // google.maps.InfoWindow.prototype.isOpen = function() {
+  //   var map = infoWindow.getMap();
+  //   return (map !== null && typeof map !== 'undefined');
+  // };
 
   google.maps.event.addDomListener(window, 'load', initMap);
 });
