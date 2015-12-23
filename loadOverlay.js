@@ -43,7 +43,7 @@ $('document').ready(function() {
 
   }
 
-  $(document).on('click', 'googft-info-window', function() {
+  $('.googft-info-window').on('click', function() {
     console.log("FK YOU");
   });
 
