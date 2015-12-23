@@ -52,17 +52,17 @@ $('document').ready(function() {
   $('.gm-style-iw').on('change', function(e) {
     console.log(e);
   });
+  if ($('.googft-info-window') !== null) {
+    document.querySelector('div#map').addEventListener('click', function(event) {
+      //  if (event.target.tagName.toLowerCase() === 'div') {
 
-  document.querySelector('div#map').addEventListener('click', function(event) {
-    //  if (event.target.tagName.toLowerCase() === 'div') {
-    if ($('.googft-info-window') !== null) {
       var infoText = $("div.googft-info-window").text();
       console.log(infoText);
-    }
 
-    //  #map > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > div
-    //  }
-  });
+      //  #map > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div.gm-style-iw > div > div > div > div
+      //  }
+    });
+  }
 
   // google.maps.InfoWindow.prototype.isOpen = function() {
   //   var map = infoWindow.getMap();
