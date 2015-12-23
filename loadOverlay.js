@@ -74,8 +74,8 @@ $('document').ready(function() {
     });
     observer.observe(document, {
       childList: false,
-      subtree: false,
-      attributes: true,
+      subtree: true,
+      attributes: false,
       characterData: false,
     });
 
