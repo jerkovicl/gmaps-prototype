@@ -70,15 +70,15 @@ $('document').ready(function() {
 
     // create an observer instance
     var observer = new MutationObserver(function() {
-      if (document.querySelector('div.googft-info-window')) {
-        console.log('table has appeared.');
+      if (target) {
+        console.log(target);
       }
     });
     observer.observe(document, {
-      childList: true,
-      subtree: true,
+      childList: false,
+      subtree: false,
       attributes: false,
-      characterData: false,
+      characterData: true,
     });
 
     // later, you can stop observing
