@@ -49,7 +49,7 @@ $('document').ready(function() {
   });
 
 
-  $('#map').on('change', function(e) {
+  $('.gm-style-iw').on('change', function(e) {
     console.log(e);
     var infoText = $("div.googft-info-window").text();
     console.log(infoText);
