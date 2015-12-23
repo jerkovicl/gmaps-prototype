@@ -47,6 +47,10 @@ $('document').ready(function() {
     console.log("FK YOU");
   });
 
+  $('gm-style-iw').on('change', 'googft-info-window', function(e) {
+    console.log(e);
+  });
+
   google.maps.InfoWindow.prototype.isOpen = function() {
     var map = infoWindow.getMap();
     return (map !== null && typeof map !== 'undefined');
