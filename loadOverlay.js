@@ -7,7 +7,7 @@ $('document').ready(function() {
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 11,
+      zoom: 7,
       center: {
         lat: 44.217659,
         lng: 15.719840
@@ -15,7 +15,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'kml/regionsShortened.kml',
+      url: 'http://jerkovicl.github.io/gmaps-prototype/kml/regionsShortened.kml',
       map: map
     });
     // var layer = new google.maps.FusionTablesLayer({
