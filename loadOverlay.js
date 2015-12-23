@@ -15,7 +15,7 @@ $('document').ready(function() {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-      url: 'regions',
+      url: 'regions.kml',
       map: map
     });
   }
