@@ -37,7 +37,7 @@ var predefinedLocations = [{
 var loc = new LocationFinder(-41.29247, 174.7732);
 
 $.when(loc.findUserLocationAsync()).then(function(lat, lng) {
-  // console.log("Lat & lng set as: ", loc.usersPosition())
+  console.log("Lat & lng set as: ", loc.usersPosition())
 });
 
 //$("form#zipcodeSearch").on("submit", function(event) {
