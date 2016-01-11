@@ -17,7 +17,7 @@ var predefinedLocations = [{
 
 /* GET CURRENT LOCATION */
 // Try W3C Geolocation (Preferred)
-window.onload = function() {
+function getCurrentLoc() {
   if (navigator.geolocation) {
     browserSupportFlag = true;
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -32,11 +32,12 @@ window.onload = function() {
     browserSupportFlag = false;
     handleNoGeolocation(browserSupportFlag);
   }
-};
+}
 
 //$("form#zipcodeSearch").on("submit", function(event) {
 //  event.preventDefault();
 var kord = 43.5081323 + ',' + 16.4401935
+getCurrentLoc();
 var currentLoc = localStorage.getItem("currentLoc");
 var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
 
