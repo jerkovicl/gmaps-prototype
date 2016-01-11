@@ -32,43 +32,43 @@ $('document').ready(function() {
   }
 
 
-  $("form#zipcodeSearch").on("submit", function(event) {
-    event.preventDefault();
-    var kord = 43.5081323 + ',' + 16.4401935
-    var currentLoc = localStorage.getItem("currentLoc");
-    var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
+  //$("form#zipcodeSearch").on("submit", function(event) {
+  //  event.preventDefault();
+  var kord = 43.5081323 + ',' + 16.4401935
+  var currentLoc = localStorage.getItem("currentLoc");
+  var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
 
-    $.ajax({
-      type: "POST",
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'text/plain'
-      },
-      dataType: "json",
-      url: jsonUrl,
-      success: function(data) {
+  $.ajax({
+    type: "POST",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'text/plain'
+    },
+    dataType: "json",
+    url: jsonUrl,
+    success: function(data) {
 
-        var lat = (data.results[0].geometry.viewport.northeast.lat + data.results[0].geometry.viewport.southwest.lat) / 2;
-        var lng = (data.results[0].geometry.viewport.northeast.lng + data.results[0].geometry.viewport.southwest.lng) / 2;
+      var lat = (data.results[0].geometry.viewport.northeast.lat + data.results[0].geometry.viewport.southwest.lat) / 2;
+      var lng = (data.results[0].geometry.viewport.northeast.lng + data.results[0].geometry.viewport.southwest.lng) / 2;
 
-        predefinedLocations.forEach(function(obj) {
-          var p1 = new google.maps.LatLng(obj.lat, obj.lng);
-          var p2 = new google.maps.LatLng(lat, lng);
+      predefinedLocations.forEach(function(obj) {
+        var p1 = new google.maps.LatLng(obj.lat, obj.lng);
+        var p2 = new google.maps.LatLng(lat, lng);
 
-          obj.distance = calcDistance(p1, p2);
-        });
+        obj.distance = calcDistance(p1, p2);
+      });
 
-        // sort by distance
-        var locationInfo = predefinedLocations.sort(compare);
+      // sort by distance
+      var locationInfo = predefinedLocations.sort(compare);
 
-        //console.log('locationInfo', locationInfo);
+      //console.log('locationInfo', locationInfo);
 
-        initializeGoogleMap(locationInfo, lat, lng);
+      initializeGoogleMap(locationInfo, lat, lng);
 
-      }
-    });
-
+    }
   });
+
+  //});
 
   var map;
 
