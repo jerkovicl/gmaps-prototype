@@ -15,29 +15,35 @@ var predefinedLocations = [{
   "lng": 16.4557887
 }];
 
-/* GET CURRENT LOCATION */
-// Try W3C Geolocation (Preferred)
-function getCurrentLoc() {
-  if (navigator.geolocation) {
-    browserSupportFlag = true;
-    navigator.geolocation.getCurrentPosition(function(position) {
-      initialLocation = position.coords.latitude + ',' + position.coords.longitude;
-      localStorage.setItem("currentLoc", initialLocation);
-    }, function() {
-      handleNoGeolocation(browserSupportFlag);
-    });
-  }
-  // Browser doesn't support Geolocation
-  else {
-    browserSupportFlag = false;
-    handleNoGeolocation(browserSupportFlag);
-  }
-}
+// /* GET CURRENT LOCATION */
+// // Try W3C Geolocation (Preferred)
+// function getCurrentLoc() {
+//   if (navigator.geolocation) {
+//     browserSupportFlag = true;
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       initialLocation = position.coords.latitude + ',' + position.coords.longitude;
+//       localStorage.setItem("currentLoc", initialLocation);
+//     }, function() {
+//       handleNoGeolocation(browserSupportFlag);
+//     });
+//   }
+//   // Browser doesn't support Geolocation
+//   else {
+//     browserSupportFlag = false;
+//     handleNoGeolocation(browserSupportFlag);
+//   }
+// }
+
+var loc = new LocationFinder(-41.29247, 174.7732);
+
+$.when(loc.findUserLocationAsync()).then(function(lat, lng) {
+  // console.log("Lat & lng set as: ", loc.usersPosition())
+});
 
 //$("form#zipcodeSearch").on("submit", function(event) {
 //  event.preventDefault();
 var kord = 43.5081323 + ',' + 16.4401935
-getCurrentLoc();
+
 var currentLoc = localStorage.getItem("currentLoc");
 var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
 
