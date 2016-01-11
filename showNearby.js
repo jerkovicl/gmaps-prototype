@@ -36,7 +36,7 @@ $("form#zipcodeSearch").on("submit", function(event) {
   event.preventDefault();
   var kord = 43.5081323 + ',' + 16.4401935
   var currentLoc = localStorage.getItem("currentLoc");
-  var jsonUrl = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
+  var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
 
   $.ajax({
     type: "POST",
