@@ -40,7 +40,7 @@ $.when(loc.findUserLocationAsync()).then(function(lat, lng) {
   var kord = 43.5081323 + ',' + 16.4401935
 
   //var currentLoc = localStorage.getItem("currentLoc");
-  var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + loc.usersPosition();
+  var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng;
 
   $.ajax({
     type: "POST",
