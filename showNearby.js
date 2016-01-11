@@ -13,7 +13,77 @@ var predefinedLocations = [{
   "name": "Klinički Bolnički Centar Split - Firule",
   "lat": 43.5037286,
   "lng": 16.4557887
-}];
+  },
+  {
+    "name": "Salon1",
+    "lat": 43.51333,
+    "lng": 16.47172
+  },
+  {
+    "name": "Salon2",
+    "lat": 43.51373,
+    "lng": 16.47142
+  },
+  {
+    "name": "Salon3",
+    "lat": 43.50578,
+    "lng": 16.47384
+  },
+  {
+    "name": "Salon4",
+    "lat": 43.50899,
+    "lng": 16.48164
+  },
+  {
+    "name": "Salon5",
+    "lat": 43.51667,
+    "lng": 16.47342
+  },
+  {
+    "name": "Salon6",
+    "lat": 43.50751,
+    "lng": 16.46713
+  },
+  {
+    "name": "Salon7",
+    "lat": 43.50661,
+    "lng": 16.48346
+  },
+  {
+    "name": "Salon8",
+    "lat": 43.50627,
+    "lng": 16.46613
+  },
+  {
+    "name": "Salon9",
+    "lat": 43.50626,
+    "lng": 16.46617
+  },
+  {
+    "name": "Salon10",
+    "lat": 43.50632,
+    "lng": 16.46619
+  },
+  {
+    "name": "Salon11",
+    "lat": 43.51373,
+    "lng": 16.47142
+  },
+  {
+    "name": "Salon12",
+    "lat": 43.50625,
+    "lng": 16.46602
+  },
+  {
+    "name": "Salon13",
+    "lat": 43.50627,
+    "lng": 16.46613
+  },
+  {
+    "name": "Salon14",
+    "lat": 43.51182,
+    "lng": 16.46644
+  }];
 
 // /* GET CURRENT LOCATION */
 // // Try W3C Geolocation (Preferred)
