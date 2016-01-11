@@ -37,45 +37,46 @@ var predefinedLocations = [{
 var loc = new LocationFinder(-41.29247, 174.7732);
 
 $.when(loc.findUserLocationAsync()).then(function(lat, lng) {
+  var kord = 43.5081323 + ',' + 16.4401935
+
+  //var currentLoc = localStorage.getItem("currentLoc");
+  var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + loc.usersPosition();
+
+  $.ajax({
+    type: "POST",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'text/plain'
+    },
+    dataType: "json",
+    url: jsonUrl,
+    success: function(data) {
+
+      var lat = (data.results[0].geometry.viewport.northeast.lat + data.results[0].geometry.viewport.southwest.lat) / 2;
+      var lng = (data.results[0].geometry.viewport.northeast.lng + data.results[0].geometry.viewport.southwest.lng) / 2;
+
+      predefinedLocations.forEach(function(obj) {
+        var p1 = new google.maps.LatLng(obj.lat, obj.lng);
+        var p2 = new google.maps.LatLng(lat, lng);
+
+        obj.distance = calcDistance(p1, p2);
+      });
+
+      // sort by distance
+      var locationInfo = predefinedLocations.sort(compare);
+
+      //console.log('locationInfo', locationInfo);
+
+      initializeGoogleMap(locationInfo, lat, lng);
+
+    }
+  });
   console.log("Lat & lng set as: ", loc.usersPosition())
 });
 
 //$("form#zipcodeSearch").on("submit", function(event) {
 //  event.preventDefault();
-var kord = 43.5081323 + ',' + 16.4401935
 
-var currentLoc = localStorage.getItem("currentLoc");
-var jsonUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + currentLoc;
-
-$.ajax({
-  type: "POST",
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'text/plain'
-  },
-  dataType: "json",
-  url: jsonUrl,
-  success: function(data) {
-
-    var lat = (data.results[0].geometry.viewport.northeast.lat + data.results[0].geometry.viewport.southwest.lat) / 2;
-    var lng = (data.results[0].geometry.viewport.northeast.lng + data.results[0].geometry.viewport.southwest.lng) / 2;
-
-    predefinedLocations.forEach(function(obj) {
-      var p1 = new google.maps.LatLng(obj.lat, obj.lng);
-      var p2 = new google.maps.LatLng(lat, lng);
-
-      obj.distance = calcDistance(p1, p2);
-    });
-
-    // sort by distance
-    var locationInfo = predefinedLocations.sort(compare);
-
-    //console.log('locationInfo', locationInfo);
-
-    initializeGoogleMap(locationInfo, lat, lng);
-
-  }
-});
 
 //});
 
