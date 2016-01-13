@@ -39,7 +39,7 @@ var LocationFinder = (function($) {
       if (window.navigator.geolocation && !isOldIe) {
 
         var geoOptions = {
-          enableHighAccuracy: false,
+          enableHighAccuracy: true,
           timeout: 5000, // Wait 5 seconds
           maximumAge: 300000 //  Valid for 5 minutes
         };
