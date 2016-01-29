@@ -171,8 +171,55 @@ $('document').ready(function() {
 
     var routePath_path = routePath.getPath();
 
+    //polygonChanged Event
+    google.maps.event.addListener(routePath_path, 'set_at', routePathpolygonChanged);
+    google.maps.event.addListener(routePath_path, 'insert_at', routePathpolygonChanged);
+    //polygonChanged Event
 
     return routePath;
+  }
+
+  function routePathpolygonChanged() {
+
+    //rewrite routePoints
+    routePoints = new Array(0);
+
+    //remove markers...
+    if (routeMarkers) {
+      for (i in routeMarkers) {
+        routeMarkers[i].setMap(null);
+      }
+    }
+    routeMarkers = new Array(0);
+
+    var vertices = routePath.getPath();
+    // Iterate over the vertices.
+    for (var i = 0; i < vertices.getLength(); i++) {
+      var xy = vertices.getAt(i);
+      //console.log('Coordinate ' + i + ':' + xy.lat() + ',' + xy.lng());
+      var point = new google.maps.LatLng(xy.lat(), xy.lng());
+      routePoints.push(point);
+
+      //add markers...
+      var marker = placeMarker(point, routePoints.length);
+      routeMarkers.push(marker);
+      if (togglemarkers != 1) {
+        //now remove it!
+        marker.setMap(null);
+      }
+    }
+
+
+    //remove old polyline first
+    if (!(routePath == undefined)) {
+      routePath.setMap(null);
+    }
+    routePath = getRoutePath();
+    routePath.setMap(map);
+
+    updateDisplay();
+
+    SaveCookieRoute();
   }
 
   function updateDisplay() {
