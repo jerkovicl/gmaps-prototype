@@ -148,7 +148,7 @@ $('document').ready(function() {
     //   routePath.setMap(null);
     // }
     routePath = getRoutePath();
-    routePath.setMap(map);
+    //routePath.setMap(map);
 
     updateDisplay();
 
