@@ -50,6 +50,7 @@ $('document').ready(function() {
       }
     });
 
+    loadroutefromurl(routefromurl);
     // var ctaLayer = new google.maps.KmlLayer({
     //   url: 'http://jerkovicl.github.io/gmaps-prototype/kml/regionsShortened.kml',
     //   map: map
@@ -218,7 +219,29 @@ $('document').ready(function() {
 
     updateDisplay();
 
-    SaveCookieRoute();
+    //SaveCookieRoute();
+  }
+
+  function loadroutefromurl(routefromurl) {
+    var arr_points = routefromurl.split("|");
+    for (var i = 0; i < arr_points.length; i++) {
+      var lat = arr_points[i].split(",")[0];
+      var lng = arr_points[i].split(",")[1];
+      var point = new google.maps.LatLng(lat, lng);
+
+      routePoints.push(point);
+      var marker = placeMarker(point, routePoints.length);
+      routeMarkers.push(marker);
+    }
+    //add polyline
+    routePath = getRoutePath();
+    routePath.setMap(map);
+
+    updateDisplay();
+
+    //ZoomOut();
+
+    //SaveCookieRoute();
   }
 
   function updateDisplay() {
