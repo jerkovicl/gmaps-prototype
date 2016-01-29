@@ -166,5 +166,40 @@ $('document').ready(function() {
     console.log("DISTANCE", dist.toFixed(3));
   }
 
+  function placeMarker(location, number) {
+    var image = new google.maps.MarkerImage('https://www.daftlogic.com/images/gmmarkersv3/stripes.png',
+      // This marker is 20 pixels wide by 32 pixels tall.
+      new google.maps.Size(20, 34),
+      // The origin for this image is 0,0.
+      new google.maps.Point(0, 0),
+      // The anchor for this image is the base of the flagpole at 0,32.
+      new google.maps.Point(9, 33));
+
+    var text = "(" + (number) + ")" + location;
+
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      icon: image,
+      title: text,
+      draggable: true
+    });
+
+    // google.maps.event.addListener(marker, 'dragend', function(event) {
+    //
+    //   marker.setTitle('(' + number + ')' + event.latLng);
+    //   routePoints[number - 1] = event.latLng;
+    //   //remove polyline
+    //   routePath.setMap(null);
+    //   //add new polyline
+    //   routePath = getRoutePath();
+    //   routePath.setMap(map);
+    //   SaveCookieRoute();
+    //   updateDisplay();
+    // });
+
+    return marker;
+  }
+
   google.maps.event.addDomListener(window, 'load', initMap);
 });
