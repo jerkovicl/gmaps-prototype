@@ -27,6 +27,8 @@ $('document').ready(function() {
 
   var unit_handler = KMS;
 
+  var routePoints = new Array(0);
+
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 7,
@@ -81,7 +83,7 @@ $('document').ready(function() {
 
   if ($('.googft-info-window') != null) {
     var infoText = $("div.googft-info-window").text();
-    console.log(infoText);
+    //console.log(infoText);
     var infoValue = "";
 
     /* MUTATION OBSERVER */
@@ -94,7 +96,7 @@ $('document').ready(function() {
     var observer = new MutationObserver(function() {
       var target = $("div.googft-info-window");
       if (target) {
-        console.log(target.text());
+        //console.log(target.text());
         localStorage.setItem("infoValue", target.text());
       }
     });
