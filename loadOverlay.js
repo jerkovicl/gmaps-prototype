@@ -148,7 +148,7 @@ $('document').ready(function() {
     //   routePath.setMap(null);
     // }
     routePath = getRoutePath();
-    //routePath.setMap(map);
+    routePath.setMap(map);
 
     updateDisplay();
 
@@ -195,18 +195,49 @@ $('document').ready(function() {
       draggable: true
     });
 
-    // google.maps.event.addListener(marker, 'dragend', function(event) {
-    //
-    //   marker.setTitle('(' + number + ')' + event.latLng);
-    //   routePoints[number - 1] = event.latLng;
-    //   //remove polyline
-    //   routePath.setMap(null);
-    //   //add new polyline
-    //   routePath = getRoutePath();
-    //   routePath.setMap(map);
-    //   SaveCookieRoute();
-    //   updateDisplay();
-    // });
+    google.maps.event.addListener(marker, 'click', function() {
+      //normal, insert new point at that point
+      if (markerclickmode == 0) {
+        clickatpoint(location);
+      }
+      //delete the marker at that point
+      if (markerclickmode == 1) {
+
+
+        //remove marker
+        routeMarkers[number - 1].setMap(null);
+
+        //update arrays...
+        routePoints.splice((number - 1), 1);
+
+
+        routeMarkers = new Array(0);
+        //recreate routeMarkers
+        if (routePoints) {
+          var count = 1;
+          for (i in routePoints) {
+            var marker = placeMarker(i, count);
+            routeMarkers.push(marker);
+            count++;
+          }
+        }
+
+        //remove old polyline first
+        if (!(routePath == undefined)) {
+          routePath.setMap(null);
+        }
+
+        //add new polyline
+        routePath = null;
+        routePath = getRoutePath();
+        routePath.setMap(map);
+
+        updateDisplay();
+        //  SaveCookieRoute();
+
+        //  deletepoint_post();
+      }
+    });
 
     return marker;
   }
