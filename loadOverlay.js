@@ -236,7 +236,7 @@ $('document').ready(function() {
       // The anchor for this image is the base of the flagpole at 0,32.
       new google.maps.Point(9, 33));
 
-    var text = "(" + (number) + ")" + location;
+    var text = "location" + location;
 
     var marker = new google.maps.Marker({
       position: location,
