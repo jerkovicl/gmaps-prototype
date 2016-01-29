@@ -27,8 +27,19 @@ $('document').ready(function() {
 
   var unit_handler = KMS;
 
+  var map;
+  var autopan;
   var routePoints = new Array(0);
   var routeMarkers = new Array(0);
+  var lines = [];
+  var lineWidth = 1;
+  var lineColor = '#ff0066';
+  var routePath;
+  var total_distance = 0;
+  var togglemarkers = 1;
+  var toggleGoogleBar = 0;
+  var markerclickmode = 0;
+  var geocoder;
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
