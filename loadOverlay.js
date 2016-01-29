@@ -28,6 +28,7 @@ $('document').ready(function() {
   var unit_handler = KMS;
 
   var routePoints = new Array(0);
+  var routeMarkers = new Array(0);
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -71,9 +72,7 @@ $('document').ready(function() {
 
   }
 
-  $('.googft-info-window').on('click', function() {
-    console.log("FK YOU");
-  });
+  ;
 
   // $('.gm-style-iw').on('change', function(e) {
   //   console.log(e);
