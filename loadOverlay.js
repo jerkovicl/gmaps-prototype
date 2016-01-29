@@ -168,6 +168,11 @@ $('document').ready(function() {
       geodesic: true,
       editable: true
     });
+
+    var routePath_path = routePath.getPath();
+
+
+    return routePath;
   }
 
   function updateDisplay() {
