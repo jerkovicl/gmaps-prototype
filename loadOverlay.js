@@ -61,21 +61,21 @@ $('document').ready(function() {
     //   }
     // });
     // layer.setMap(map);
-    var layer = new google.maps.FusionTablesLayer({
-      map: map,
-      heatmap: {
-        enabled: false
-      },
-      query: {
-        select: "col2",
-        from: "12r8gKqTrEd-X6hHILbtTVstsILjAKN9u3WbPdzgt",
-        where: ""
-      },
-      options: {
-        styleId: 2,
-        templateId: 2
-      }
-    });
+    // var layer = new google.maps.FusionTablesLayer({
+    //   map: map,
+    //   heatmap: {
+    //     enabled: false
+    //   },
+    //   query: {
+    //     select: "col2",
+    //     from: "12r8gKqTrEd-X6hHILbtTVstsILjAKN9u3WbPdzgt",
+    //     where: ""
+    //   },
+    //   options: {
+    //     styleId: 2,
+    //     templateId: 2
+    //   }
+    // });
 
     google.maps.event.addListener(map, 'click', function(event) {
       clickatpoint(event.latLng);
@@ -91,35 +91,35 @@ $('document').ready(function() {
   //   console.log(infoText);
   // });
 
-  if ($('.googft-info-window') != null) {
-    var infoText = $("div.googft-info-window").text();
-    //console.log(infoText);
-    var infoValue = "";
-
-    /* MUTATION OBSERVER */
-
-    // check if supported
-
-    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-
-    // create an observer instance
-    var observer = new MutationObserver(function() {
-      var target = $("div.googft-info-window");
-      if (target) {
-        //console.log(target.text());
-        localStorage.setItem("infoValue", target.text());
-      }
-    });
-    observer.observe(document, {
-      childList: true,
-      subtree: true,
-      attributes: false,
-      characterData: false,
-    });
-
-    // later, you can stop observing
-    //observer.disconnect();
-  }
+  // if ($('.googft-info-window') != null) {
+  //   var infoText = $("div.googft-info-window").text();
+  //   //console.log(infoText);
+  //   var infoValue = "";
+  //
+  //   /* MUTATION OBSERVER */
+  //
+  //   // check if supported
+  //
+  //   var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+  //
+  //   // create an observer instance
+  //   var observer = new MutationObserver(function() {
+  //     var target = $("div.googft-info-window");
+  //     if (target) {
+  //       //console.log(target.text());
+  //       localStorage.setItem("infoValue", target.text());
+  //     }
+  //   });
+  //   observer.observe(document, {
+  //     childList: true,
+  //     subtree: true,
+  //     attributes: false,
+  //     characterData: false,
+  //   });
+  //
+  //   // later, you can stop observing
+  //   //observer.disconnect();
+  // }
   // if ($('.googft-info-window') !== null) {
   //   document.querySelector('div#map').addEventListener('click', function(event) {
   //     //  if (event.target.tagName.toLowerCase() === 'div') {
