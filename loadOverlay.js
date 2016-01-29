@@ -269,7 +269,8 @@ $('document').ready(function() {
       map: map,
       icon: image,
       title: text,
-      draggable: true
+      draggable: true,
+      visible: true
     });
 
     google.maps.event.addListener(marker, 'click', function() {
