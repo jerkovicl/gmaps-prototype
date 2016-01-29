@@ -143,10 +143,10 @@ $('document').ready(function() {
     routeMarkers.push(marker);
 
 
-    // //remove old polyline first
-    // if (!(routePath == undefined)) {
-    //   routePath.setMap(null);
-    // }
+    //remove old polyline first
+    if (!(routePath == undefined)) {
+      routePath.setMap(null);
+    }
     routePath = getRoutePath();
     routePath.setMap(map);
 
