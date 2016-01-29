@@ -47,7 +47,8 @@ $('document').ready(function() {
       center: {
         lat: 44.217659,
         lng: 15.719840
-      }
+      },
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     //var routefromurl = "0";
     //loadroutefromurl(routefromurl);
