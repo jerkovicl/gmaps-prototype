@@ -4,6 +4,28 @@ $('document').ready(function() {
 
   "use strict";
 
+  var KMS = {
+    label: "km",
+    f: function(distance) {
+      return distance / 1000;
+    }
+  };
+
+  var NMILES = {
+    label: "nautical",
+    f: function(distance) {
+      return ((distance / 1609.344) * (1 / 1.150779));
+    }
+  };
+
+  var METRES = {
+    label: "metres",
+    f: function(distance) {
+      return (distance);
+    }
+  };
+
+  var unit_handler = KMS;
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -41,6 +63,9 @@ $('document').ready(function() {
       }
     });
 
+    google.maps.event.addListener(map, 'click', function(event) {
+      clickatpoint(event.latLng);
+    });
 
   }
 
@@ -99,6 +124,45 @@ $('document').ready(function() {
   //   var map = infoWindow.getMap();
   //   return (map !== null && typeof map !== 'undefined');
   // };
+
+  function clickatpoint(point) {
+    routePoints.push(point);
+    var marker = placeMarker(point, routePoints.length);
+    routeMarkers.push(marker);
+
+
+    // //remove old polyline first
+    // if (!(routePath == undefined)) {
+    //   routePath.setMap(null);
+    // }
+    routePath = getRoutePath();
+    routePath.setMap(map);
+
+    updateDisplay();
+
+    if (autopan == true) {
+      map.setCenter(point);
+    }
+
+    //SaveCookieRoute();
+  }
+
+  function getRoutePath() {
+    var routePath = new google.maps.Polyline({
+      path: routePoints,
+      strokeColor: lineColor,
+      strokeOpacity: 1.0,
+      strokeWeight: lineWidth,
+      geodesic: true,
+      editable: true
+    });
+  }
+
+  function updateDisplay() {
+    var total_distance_m = 1000 * routePath.inKm();
+    var dist = unit_handler.f(total_distance_m);
+    console.log("DISTANCE", dist.toFixed(3));
+  }
 
   google.maps.event.addDomListener(window, 'load', initMap);
 });
