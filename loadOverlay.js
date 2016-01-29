@@ -209,7 +209,6 @@ $('document').ready(function() {
       }
     }
 
-
     //remove old polyline first
     if (!(routePath == undefined)) {
       routePath.setMap(null);
