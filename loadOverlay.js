@@ -49,8 +49,8 @@ $('document').ready(function() {
         lng: 15.719840
       }
     });
-    var routefromurl = "0";
-    loadroutefromurl(routefromurl);
+    //var routefromurl = "0";
+    //loadroutefromurl(routefromurl);
     // var ctaLayer = new google.maps.KmlLayer({
     //   url: 'http://jerkovicl.github.io/gmaps-prototype/kml/regionsShortened.kml',
     //   map: map
