@@ -254,7 +254,7 @@ $('document').ready(function() {
   }
 
   function placeMarker(location, number) {
-    var image = new google.maps.MarkerImage('http://jerkovicl.github.io/gmaps-prototype/images/flag.png',
+    var image = new google.maps.MarkerImage('http://jerkovicl.github.io/gmaps-prototype/images/stripes.png',
       // This marker is 20 pixels wide by 32 pixels tall.
       new google.maps.Size(20, 34),
       // The origin for this image is 0,0.
