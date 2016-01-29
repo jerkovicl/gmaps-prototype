@@ -42,12 +42,14 @@ $('document').ready(function() {
   var geocoder;
 
   function initMap() {
+    var latlng = new google.maps.LatLng(0, 0);
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 7,
-      center: {
-        lat: 44.217659,
-        lng: 15.719840
-      },
+      // center: {
+      //   lat: 44.217659,
+      //   lng: 15.719840
+      // },
+      center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
     //var routefromurl = "0";
@@ -310,7 +312,7 @@ $('document').ready(function() {
         updateDisplay();
         //  SaveCookieRoute();
 
-        //  deletepoint_post();
+        //deletepoint_post();
       }
     });
 
