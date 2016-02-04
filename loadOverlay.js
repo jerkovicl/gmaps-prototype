@@ -209,13 +209,6 @@ $('document').ready(function() {
         //now remove it!
         marker.setMap(null);
       }
-
-      // TODO Distance between points
-
-      var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-      console.log("DISTANCE BETWEEN POINTS", lastLeg);
-
-      // Distance between points
     }
 
     //remove old polyline first
@@ -224,8 +217,6 @@ $('document').ready(function() {
     }
     routePath = getRoutePath();
     routePath.setMap(map);
-
-
 
     updateDisplay();
 
@@ -261,6 +252,12 @@ $('document').ready(function() {
     var r1dist = localStorage.setItem("r1dist", dist.toFixed(3));
     console.log("r1dist", localStorage.getItem("r1dist"));
     console.log("DISTANCE", dist.toFixed(3));
+    // TODO Distance between points
+
+    var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    console.log("DISTANCE BETWEEN POINTS", lastLeg);
+
+    // Distance between points
   }
 
   function distance_between_points(p1, p2) {
