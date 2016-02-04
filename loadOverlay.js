@@ -258,7 +258,7 @@ $('document').ready(function() {
 
     var path = routePath.getPath();
     var length = google.maps.geometry.spherical.computeLength(path)
-    //console.log("DISTANCE BETWEEN POINTS", length);
+    console.log("DISTANCE BETWEEN POINTS", length);
     // Distance between points
   }
 
