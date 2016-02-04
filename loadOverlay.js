@@ -262,6 +262,11 @@ $('document').ready(function() {
   }
 
   function distance_between_points(p1, p2) {
+    // distance calculation
+    Math.deg2rad = function(x) {
+      return x * (Math.PI / 180.0);
+    } // Distance in metres
+    var EARTH_RADIUS = 6367000 ; // Calculates the distance (in metres) between 2 points
     var a = Math.deg2rad(90 - p1.y);
     var b = Math.deg2rad(90 - p2.y);
     var theta = Math.deg2rad(p2.x - p1.x);
