@@ -287,12 +287,7 @@ $('document').ready(function() {
       if (markerclickmode == 0) {
         clickatpoint(location);
 
-        // TODO Distance between points
 
-        var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-        console.log("DISTANCE BETWEEN POINTS", lastLeg);
-
-        // Distance between points
       }
       //delete the marker at that point
       if (markerclickmode == 1) {
@@ -325,6 +320,13 @@ $('document').ready(function() {
         routePath = null;
         routePath = getRoutePath();
         routePath.setMap(map);
+
+        // TODO Distance between points
+
+        var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+        console.log("DISTANCE BETWEEN POINTS", lastLeg);
+
+        // Distance between points
 
         updateDisplay();
         //  SaveCookieRoute();
