@@ -254,7 +254,8 @@ $('document').ready(function() {
     console.log("DISTANCE", dist.toFixed(3));
     // TODO Distance between points
 
-    var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    var lastLeg = routePoints;
     console.log("DISTANCE BETWEEN POINTS", lastLeg);
 
     // Distance between points
