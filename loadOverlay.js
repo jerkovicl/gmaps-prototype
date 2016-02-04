@@ -160,6 +160,9 @@ $('document').ready(function() {
       map.setCenter(point);
     }
 
+    // TODO: DISTANCE between points
+    var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    console.log(lastLeg);
     //SaveCookieRoute();
   }
 
@@ -235,6 +238,7 @@ $('document').ready(function() {
       routePoints.push(point);
       var marker = placeMarker(point, routePoints.length);
       routeMarkers.push(marker);
+
     }
     //add polyline
     routePath = getRoutePath();
@@ -251,7 +255,7 @@ $('document').ready(function() {
     var total_distance_m = 1000 * routePath.inKm();
     var dist = unit_handler.f(total_distance_m);
     var r1dist = localStorage.setItem("r1dist", dist.toFixed(3));
-    console.log("r1dist", localStorage.getItem(r1dist));
+    console.log("r1dist", localStorage.getItem("r1dist"));
     console.log("DISTANCE", dist.toFixed(3));
   }
 
