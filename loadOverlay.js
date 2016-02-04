@@ -153,6 +153,13 @@ $('document').ready(function() {
     routePath = getRoutePath();
     routePath.setMap(map);
 
+    // TODO Distance between points
+
+    var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    console.log("DISTANCE BETWEEN POINTS", lastLeg);
+
+    // Distance between points
+
     updateDisplay();
 
     if (autopan == true) {
@@ -320,13 +327,6 @@ $('document').ready(function() {
         routePath = null;
         routePath = getRoutePath();
         routePath.setMap(map);
-
-        // TODO Distance between points
-
-        var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-        console.log("DISTANCE BETWEEN POINTS", lastLeg);
-
-        // Distance between points
 
         updateDisplay();
         //  SaveCookieRoute();
