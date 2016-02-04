@@ -250,6 +250,8 @@ $('document').ready(function() {
   function updateDisplay() {
     var total_distance_m = 1000 * routePath.inKm();
     var dist = unit_handler.f(total_distance_m);
+    var r1dist = localStorage.setItem("r1dist", dist.toFixed(3));
+    console.log("r1dist", localStorage.getItem(r1dist));
     console.log("DISTANCE", dist.toFixed(3));
   }
 
