@@ -256,7 +256,9 @@ $('document').ready(function() {
 
     //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
     var lastLeg = routePoints;
-    console.log("DISTANCE BETWEEN POINTS", lastLeg);
+    //console.log("DISTANCE BETWEEN POINTS", lastLeg);
+    console.log("ROUTE POINTS", routePoints);
+    console.log("ROUTE PATH", routePath);
 
     // Distance between points
   }
@@ -298,7 +300,6 @@ $('document').ready(function() {
       //normal, insert new point at that point
       if (markerclickmode == 0) {
         clickatpoint(location);
-
 
       }
       //delete the marker at that point
