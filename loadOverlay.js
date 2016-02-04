@@ -255,11 +255,10 @@ $('document').ready(function() {
     // TODO Distance between points
 
     //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-    var lastLeg = routePoints;
-    //console.log("DISTANCE BETWEEN POINTS", lastLeg);
-    console.log("ROUTE POINTS", routePoints);
-    console.log("ROUTE PATH", routePath);
 
+    var path = routePath.getPath();
+    var length = google.maps.geometry.spherical.computeLength(path)
+    //console.log("DISTANCE BETWEEN POINTS", length);
     // Distance between points
   }
 
