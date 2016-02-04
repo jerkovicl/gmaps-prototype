@@ -324,7 +324,7 @@ $('document').ready(function() {
         // TODO Distance between points
 
         var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-        console.log(lastLeg);
+        console.log("DISTANCE BETWEEN POINTS", lastLeg);
 
         // Distance between points
         //deletepoint_post();
