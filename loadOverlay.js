@@ -146,7 +146,6 @@ $('document').ready(function() {
     var marker = placeMarker(point, routePoints.length);
     routeMarkers.push(marker);
 
-
     //remove old polyline first
     if (!(routePath == undefined)) {
       routePath.setMap(null);
@@ -160,10 +159,6 @@ $('document').ready(function() {
       map.setCenter(point);
     }
 
-    // TODO: DISTANCE between points
-    var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-    console.log(lastLeg);
-    //SaveCookieRoute();
   }
 
   function getRoutePath() {
@@ -259,6 +254,14 @@ $('document').ready(function() {
     console.log("DISTANCE", dist.toFixed(3));
   }
 
+  function distance_between_points(p1, p2) {
+    var a = Math.deg2rad(90 - p1.y);
+    var b = Math.deg2rad(90 - p2.y);
+    var theta = Math.deg2rad(p2.x - p1.x);
+    var c = Math.acos(Math.cos(a) * Math.cos(b) + Math.sin(a) * Math.sin(b) * Math.cos(theta));
+    return;c * EARTH_RADIUS;
+  }
+
   function placeMarker(location, number) {
     var image = new google.maps.MarkerImage('http://jerkovicl.github.io/gmaps-prototype/images/stripes.png',
       // This marker is 20 pixels wide by 32 pixels tall.
@@ -318,7 +321,12 @@ $('document').ready(function() {
 
         updateDisplay();
         //  SaveCookieRoute();
+        // TODO Distance between points
 
+        var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+        console.log(lastLeg);
+
+        // Distance between points
         //deletepoint_post();
       }
     });
