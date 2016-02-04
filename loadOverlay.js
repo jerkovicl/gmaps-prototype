@@ -153,7 +153,7 @@ $('document').ready(function() {
     routePath = getRoutePath();
     routePath.setMap(map);
 
-
+    console.log("ROUTE MARKERS", routeMarkers);
 
     updateDisplay();
 
@@ -179,8 +179,8 @@ $('document').ready(function() {
     //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
 
     //var path = routePath.getPath();
-    var length = google.maps.geometry.spherical.computeLength(routePath_path)
-    console.log("DISTANCE BETWEEN POINTS", (length / 1000).inKm);
+    var length = google.maps.geometry.spherical.computeLength(routePath.getPath())
+    console.log("DISTANCE BETWEEN POINTS", (length / 1000).toFixed(3));
     // Distance between points
 
     //polygonChanged Event
