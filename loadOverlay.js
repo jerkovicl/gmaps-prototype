@@ -153,27 +153,7 @@ $('document').ready(function() {
 
     routePath = getRoutePath();
     routePath.setMap(map);
-    // TODO Distance between points
 
-    //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
-
-    //var path = routePath.getPath();
-    var length = google.maps.geometry.spherical.computeLength(routePath.getPath())
-    console.log("DISTANCE BETWEEN POINTS", (length / 1000).toFixed(3));
-    console.log("ROUTE MARKERS", routeMarkers);
-    //console.log("POINT", point);
-
-    // Distance between points
-    console.log("ROUTE POINTS", routePoints);
-    var midLength;
-    for (var i = 1; i < routeMarkers.length; i++) {
-      var latLngA = new google.maps.LatLng(routeMarkers[i - 1].position.lat(), routeMarkers[i - 1].position.lng());
-      var latLngB = new google.maps.LatLng(routeMarkers[i].position.lat(), routeMarkers[i].position.lng());
-
-      midLength = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-
-    }
-    console.log(midLength);
     updateDisplay();
 
     if (autopan == true) {
@@ -272,12 +252,28 @@ $('document').ready(function() {
   function updateDisplay() {
     var total_distance_m = 1000 * routePath.inKm();
     var dist = unit_handler.f(total_distance_m);
-    var r1dist = localStorage.setItem("r1dist", dist.toFixed(3));
-    console.log("r1dist", localStorage.getItem("r1dist"));
+    //var r1dist = localStorage.setItem("r1dist", dist.toFixed(3));
+    //console.log("r1dist", localStorage.getItem("r1dist"));
     console.log("DISTANCE", dist.toFixed(3));
+    console.log("ROUTE MARKERS LENGTH", routeMarkers.length);
+    // TODO Distance between points
 
-    console.log("ROUTE MARKERS ON UPDATE", routeMarkers);
-    console.log("ROUTE PATH", routeMarkers.length);
+    //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
+    //var path = routePath.getPath();
+    //var length = google.maps.geometry.spherical.computeLength(routePath.getPath())
+    console.log("ROUTE MARKERS", routeMarkers);
+    //console.log("POINT", point);
+    console.log("ROUTE POINTS", routePoints);
+    var midLength;
+    for (var i = 1; i < routeMarkers.length; i++) {
+      var latLngA = new google.maps.LatLng(routeMarkers[i - 1].position.lat(), routeMarkers[i - 1].position.lng());
+      var latLngB = new google.maps.LatLng(routeMarkers[i].position.lat(), routeMarkers[i].position.lng());
+
+      midLength = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
+
+    }
+    console.log("DISTANCE BETWEEN POINTS", (midLength / 1000).toFixed(3));
+    // Distance between points
 
 
   }
