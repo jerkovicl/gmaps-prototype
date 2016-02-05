@@ -273,7 +273,7 @@ $('document').ready(function() {
     console.log("r1dist", localStorage.getItem("r1dist"));
     console.log("DISTANCE", dist.toFixed(3));
 
-
+    console.log("ROUTE MARKERS ON UPDATE", routeMarkers);
 
 
   }
