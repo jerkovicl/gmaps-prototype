@@ -165,7 +165,12 @@ $('document').ready(function() {
 
     // Distance between points
     console.log("ROUTE POINTS", routePoints);
-    //google.maps.geometry.spherical.computeDistanceBetween (latLngA, latLngB);
+    var latLngA = new google.maps.LatLng(routeMarkers[0].position.lat(), routeMarkers[0].position.lng());
+    var latLngB = new google.maps.LatLng(routeMarkers[1].position.lat(), routeMarkers[1].position.lng());
+
+    var midLength = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
+    console.log(midLength);
+
     updateDisplay();
 
     if (autopan == true) {
