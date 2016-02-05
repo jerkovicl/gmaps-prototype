@@ -274,6 +274,7 @@ $('document').ready(function() {
     console.log("DISTANCE", dist.toFixed(3));
 
     console.log("ROUTE MARKERS ON UPDATE", routeMarkers);
+    console.log("ROUTE PATH", routePath.length);
 
 
   }
