@@ -165,12 +165,13 @@ $('document').ready(function() {
 
     // Distance between points
     console.log("ROUTE POINTS", routePoints);
-    var latLngA = new google.maps.LatLng(routeMarkers[0].position.lat(), routeMarkers[0].position.lng());
-    var latLngB = new google.maps.LatLng(routeMarkers[1].position.lat(), routeMarkers[1].position.lng());
+    for (var i = 1; i < routeMarkers.length; i++) {
+      var latLngA = new google.maps.LatLng(routeMarkers[i - 1].position.lat(), routeMarkers[i - 1].position.lng());
+      var latLngB = new google.maps.LatLng(routeMarkers[i].position.lat(), routeMarkers[i].position.lng());
 
-    var midLength = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-    console.log(midLength);
-
+      var midLength = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
+      console.log(midLength);
+    }
     updateDisplay();
 
     if (autopan == true) {
