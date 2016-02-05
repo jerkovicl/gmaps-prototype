@@ -151,6 +151,8 @@ $('document').ready(function() {
       routePath.setMap(null);
     }
 
+    routePath = getRoutePath();
+    routePath.setMap(map);
     // TODO Distance between points
 
     //var lastLeg = distance_between_points(routePoints [routePoints.length - 2], routePoints [routePoints.length - 1]);
@@ -162,8 +164,6 @@ $('document').ready(function() {
     //console.log("POINT", point);
 
     // Distance between points
-    routePath = getRoutePath();
-    routePath.setMap(map);
     console.log("ROUTE POINTS", routePoints);
     //google.maps.geometry.spherical.computeDistanceBetween (latLngA, latLngB);
     updateDisplay();
